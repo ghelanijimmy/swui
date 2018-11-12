@@ -1,7 +1,9 @@
+/*******NORMALIZATION********/
 /*******GENERIC STYLES*******/
 .centerText {
   text-align: center; }
 
+/*****HERO*******/
 .hero {
   background-image: url("https://placehold.it/1920x300");
   min-height: 300px;
@@ -9,10 +11,14 @@
   background-position: center;
   background-repeat: no-repeat; }
 
+/*******MAINCONTENT******/
 .mainContent {
   max-width: 1920px;
   width: 80%;
   margin: auto; }
+
+.mainContent .contentBox {
+  /*******FEATURED*******/ }
 
 .mainContent .contentBox section .readMoreButton {
   display: block;
@@ -35,6 +41,7 @@
 .mainContent .contentBox section.featuredBox .featuredContent {
   display: grid;
   grid-template: auto / 1fr;
+  grid-gap: 10px 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -47,7 +54,7 @@
   grid-gap: 10px 10px; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList div {
-  background-color: #333;
+  background-color: #dcdcdc;
   -webkit-box-shadow: 0px 3px 10px -2px black;
   -moz-box-shadow: 0px 3px 10px -2px black;
   box-shadow: 0px 3px 10px -2px black; }
@@ -60,13 +67,18 @@
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background-color: white; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .metaInfo .logo {
   display: grid;
   grid-template: 1fr 1fr / 1fr;
   align-items: center;
   justify-content: center; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .logo img {
+  display: block;
+  margin: auto; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox {
   display: grid;
@@ -79,12 +91,15 @@
 .mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox ul {
   align-items: center;
   justify-content: center;
-  max-width: 130px;
+  max-width: 100px;
   width: 100%;
-  background: white;
+  background: #dcdcdc;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   display: grid;
   grid-template: auto/repeat(5, 1fr);
   margin: auto; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox ul li {
+  color: white; }
