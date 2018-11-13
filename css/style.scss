@@ -376,6 +376,7 @@ footer {
         }
         .metaInfo {
           grid-column-gap: 10%;
+          grid-template-columns: 1fr !important;
           .metaDetails {
             & > div {
               display: -ms-grid;
@@ -388,6 +389,7 @@ footer {
                 display: -ms-grid;
                 display: grid;
                 grid-template-areas: "icon icontitle icontitle icontitle" "none icontitle icontitle icontitle";
+                grid-template-columns: 1fr 20fr;
                 grid-column-gap: 10px;
                 i {
                   -ms-grid-row: 1;
