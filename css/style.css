@@ -60,10 +60,16 @@ a {
   margin: auto; }
 
 .mainContent.topBar {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2% 0;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr 1fr;
   grid-template: auto / 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
 
 .mainContent.topBar .topBarContent {
@@ -72,6 +78,7 @@ a {
 .mainContent.topBar .topBarContent a {
   font-weight: 400;
   text-decoration: none;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 2%;
   color: #56666E; }
@@ -87,6 +94,8 @@ a {
   opacity: 0;
   height: 0;
   margin: 0;
+  -webkit-transition: .2s all ease-in-out;
+  -o-transition: .2s all ease-in-out;
   transition: .2s all ease-in-out; }
 
 .mainContent .contentBox section .readMoreButton {
@@ -95,36 +104,49 @@ a {
   width: 100px;
   text-decoration: none;
   padding: 1%;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .mainContent .contentBox section.featuredBox {
   border: 1px solid #ddd;
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "image content content content content cta cta cta cta" "meta meta meta meta meta meta meta meta meta"; }
+  grid-template-areas: "image content content content content cta cta cta cta" "meta meta meta meta meta meta meta meta meta";
+  -webkit-box-shadow: 0 7px 20px -10px #000;
+  box-shadow: 0 7px 20px -10px #000; }
 
 .mainContent .contentBox section.featuredBox i {
   margin-right: 10px; }
 
 .mainContent .contentBox section.featuredBox .featuredImage {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: image; }
 
 .mainContent .contentBox section.featuredBox .featuredImage img {
   width: 100%; }
 
 .mainContent .contentBox section.featuredBox .featuredContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
   grid-area: content;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0% 30px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center; }
 
 .mainContent .contentBox section.featuredBox .featuredContent h4 {
   margin: 0; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto;
   grid-template-rows: auto;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px 10px;
   margin-top: 30px; }
@@ -155,9 +177,19 @@ a {
   font-size: 32px; }
 
 .mainContent .contentBox section.featuredBox .cta {
+  -ms-grid-row: 1;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 7;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   padding: 15% 0;
   margin-right: 30px;
@@ -165,7 +197,6 @@ a {
 
 .mainContent .contentBox section.featuredBox .cta a {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #27C4B8;
   color: white;
@@ -177,29 +208,35 @@ a {
   text-align: center; }
 
 .mainContent .contentBox section.featuredBox .metaInfo {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 17;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 10px 6fr;
   grid-template-columns: 1fr 6fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: #DDDDDD;
   grid-area: meta;
   color: #56666E;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2%; }
 
 .mainContent .contentBox section.featuredBox .metaInfo .ratingBox {
   max-width: 100px;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   padding: 1px 5px 4px;
   background-color: white;
   margin-right: 20px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px; }
 
 .mainContent .contentBox section.featuredBox .metaInfo .ratingBox i {
@@ -220,7 +257,6 @@ a {
 footer {
   background-color: #ddd;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px 0;
   margin-top: 150px; }
@@ -242,6 +278,7 @@ footer .copyRight p {
 @media all and (max-width: 1173px) {
   .mainContent .contentBox .featuredBox {
     grid-row-gap: 15px;
+    -ms-grid-rows: auto 15px auto 15px auto 15px auto !important;
     grid-template-areas: "image" "content" "cta" "meta" !important; }
   .mainContent .contentBox .featuredBox .cta {
     padding: 5% !important;
@@ -251,6 +288,7 @@ footer .copyRight p {
   .mainContent .contentBox .featuredBox .featuredContent .priceList {
     text-align: center !important; }
   .mainContent .contentBox .featuredBox .featuredContent .priceList > div {
+    position: relative;
     padding: 10px 0 !important;
     border-width: 1px;
     border-color: #ddd;
@@ -262,22 +300,44 @@ footer .copyRight p {
   .mainContent .contentBox .featuredBox .featuredContent .priceList > div span.price {
     padding-left: 10px; }
   .mainContent .contentBox .featuredBox .metaInfo {
+    -ms-grid-columns: 1fr 10px 3fr !important;
     grid-template-columns: 1fr 3fr !important;
     grid-column-gap: 10px; } }
 
 @media all and (max-width: 859px) {
+  .mainContent.topBar {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+    grid-template: auto / 1fr;
+    text-align: center; }
+  .mainContent.topBar .topBarContent {
+    text-align: center !important; }
   .mainContent .contentBox .featuredBox .metaInfo {
     grid-column-gap: 10%; }
   .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div {
+    display: -ms-grid;
     display: grid;
     grid-row-gap: 15px; }
   .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle {
+    display: -ms-grid;
     display: grid;
     grid-template-areas: "icon icontitle icontitle icontitle" "none icontitle icontitle icontitle";
     grid-column-gap: 10px; }
   .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle i {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: icon;
     margin: 0; }
   .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle span {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 5;
     grid-area: icontitle;
     line-height: 18px; } }
+
+@media all and (max-width: 525px) {
+  .mainContent .contentBox .featuredBox .featuredContent .priceList {
+    -ms-grid-rows: auto 10px auto !important;
+    -ms-grid-columns: 1fr 10px 1fr !important;
+    grid-template: auto auto / 1fr 1fr !important; } }
