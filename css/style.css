@@ -193,7 +193,7 @@ a {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  padding: 15% 0;
+  padding: 10% 0;
   margin-right: 30px;
   grid-area: cta; }
 
