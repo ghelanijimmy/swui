@@ -152,8 +152,10 @@ a {
   margin-top: 30px; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList div {
-  border-left: 1px solid #ddd;
-  padding-left: 20px; }
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 3%;
+  background: #ededed; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList div sup {
   position: absolute;
@@ -191,7 +193,7 @@ a {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  padding: 15% 0;
+  padding: 10% 0;
   margin-right: 30px;
   grid-area: cta; }
 
@@ -205,7 +207,20 @@ a {
   font-size: 20px;
   display: block;
   width: 90%;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: .2s all ease-in-out;
+  -moz-transition: .2s all ease-in-out;
+  -ms-transition: .2s all ease-in-out;
+  -o-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out; }
+
+.mainContent .contentBox section.featuredBox .cta a:hover {
+  background-color: #34e2d4;
+  -webkit-transition: .2s all ease-in-out;
+  -moz-transition: .2s all ease-in-out;
+  -ms-transition: .2s all ease-in-out;
+  -o-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out; }
 
 .mainContent .contentBox section.featuredBox .metaInfo {
   -ms-grid-row: 3;
