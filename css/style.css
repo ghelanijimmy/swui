@@ -155,7 +155,29 @@ a {
   border: 1px solid #ddd;
   text-align: center;
   padding: 3%;
-  background: #ededed; }
+  background: #ededed;
+  -webkit-transition: .2s all ease-in-out;
+  -moz-transition: .2s all ease-in-out;
+  -ms-transition: .2s all ease-in-out;
+  -o-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out;
+  -webkit-box-shadow: 0 7px 20px -10px #000;
+  box-shadow: 0 7px 20px -10px #000; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div:hover {
+  background: #f7f7f7 !important;
+  -webkit-transition: .2s all ease-in-out;
+  -moz-transition: .2s all ease-in-out;
+  -ms-transition: .2s all ease-in-out;
+  -o-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out;
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0 15px 25px -15px #000;
+  box-shadow: 0 15px 25px -15px #000; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList div sup {
   position: absolute;
