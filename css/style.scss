@@ -52,7 +52,7 @@ a {
   padding: 0;
   .hero {
     background-image: url('../images/Banner.png');
-    min-height: 300px;
+    min-height: 400px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,6 +136,13 @@ a {
           div {
             border-left: 1px solid #ddd;
             padding-left: 20px;
+            sup {
+              position: absolute;
+              margin-top: 5px;
+            }
+            span.price {
+              padding-left: 10px;
+            }
             p {
               margin: 0;
               &.subPrice {
@@ -261,6 +268,7 @@ footer {
         grid-template-areas: "image""content""cta""meta" !important;
         .cta {
           padding: 5% !important;
+          margin-right: 0 !important;
           a {
             width: 100% !important;
           }
@@ -274,6 +282,13 @@ footer {
               border-color: #ddd;
               border-style: solid;
               background-color: #ededed;
+              sup {
+                position: absolute;
+                margin-top: 5px;
+              }
+              span.price {
+                padding-left: 10px;
+              }
             }
           }
         }
