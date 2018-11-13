@@ -1,0 +1,345 @@
+/*******NORMALIZATION********/
+* {
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.boldText {
+  font-weight: 600 !important; }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  color: #D91E81;
+  font-weight: 300; }
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #56666E;
+  margin: 0; }
+
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #463469; }
+
+body {
+  margin: 0; }
+
+p {
+  font-size: 18px;
+  color: #56666E; }
+
+section {
+  margin-bottom: 30px; }
+
+a {
+  color: #D91E81; }
+
+/*******GENERIC STYLES*******/
+.centerText {
+  text-align: center; }
+
+/*****HERO*******/
+.fullWidthContent {
+  margin: 0;
+  padding: 0; }
+
+.fullWidthContent .hero {
+  background-image: url("../images/Banner.png");
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+/*******MAINCONTENT******/
+.mainContent {
+  max-width: 1366px;
+  width: 90%;
+  margin: auto; }
+
+.mainContent.topBar {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2% 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template: auto / 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.mainContent.topBar .topBarContent {
+  text-align: right; }
+
+.mainContent.topBar .topBarContent a {
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 2%;
+  color: #56666E; }
+
+.mainContent.topBar .topBarContent a:nth-of-type(even) {
+  border-left: 1px solid #56666E;
+  border-right: 1px solid #56666E; }
+
+.mainContent .contentBox {
+  /*******FEATURED*******/ }
+
+.mainContent .contentBox section #hiddenText {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  -webkit-transition: .2s all ease-in-out;
+  -o-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out; }
+
+.mainContent .contentBox section .readMoreButton {
+  display: block;
+  margin: 10px auto 0;
+  width: 100px;
+  text-decoration: none;
+  padding: 1%;
+  position: relative;
+  cursor: pointer; }
+
+.mainContent .contentBox section.featuredBox {
+  border: 1px solid #ddd;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "image content content content content cta cta cta cta" "meta meta meta meta meta meta meta meta meta";
+  -webkit-box-shadow: 0 7px 20px -10px #000;
+  box-shadow: 0 7px 20px -10px #000; }
+
+.mainContent .contentBox section.featuredBox i {
+  margin-right: 10px; }
+
+.mainContent .contentBox section.featuredBox .featuredImage {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image; }
+
+.mainContent .contentBox section.featuredBox .featuredImage img {
+  width: 100%; }
+
+.mainContent .contentBox section.featuredBox .featuredContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-area: content;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0% 30px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
+
+.mainContent .contentBox section.featuredBox .featuredContent h4 {
+  margin: 0; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px 10px;
+  margin-top: 30px; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div {
+  border-left: 1px solid #ddd;
+  padding-left: 20px; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div sup {
+  position: absolute;
+  margin-top: 5px; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div span.price {
+  padding-left: 10px; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div p {
+  margin: 0; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div p.subPrice {
+  font-size: 14px; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div p.subPrice span {
+  font-weight: 600; }
+
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div span.price {
+  color: #D91E81;
+  font-weight: 800;
+  font-size: 32px; }
+
+.mainContent .contentBox section.featuredBox .cta {
+  -ms-grid-row: 1;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 15% 0;
+  margin-right: 30px;
+  grid-area: cta; }
+
+.mainContent .contentBox section.featuredBox .cta a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #27C4B8;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  width: 90%;
+  text-align: center; }
+
+.mainContent .contentBox section.featuredBox .metaInfo {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 17;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 10px 6fr;
+  grid-template-columns: 1fr 6fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #DDDDDD;
+  grid-area: meta;
+  color: #56666E;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2%; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .ratingBox {
+  max-width: 100px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 1px 5px 4px;
+  background-color: white;
+  margin-right: 20px;
+  border-radius: 3px; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .ratingBox i {
+  margin: 0;
+  color: #27C4B8;
+  font-size: 10px; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .metaDetails p {
+  margin: 0; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .metaDetails > div {
+  margin-bottom: 15px; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .metaDetails > div span.metaTitle {
+  font-size: 20px;
+  font-weight: 600; }
+
+footer {
+  background-color: #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin-top: 150px; }
+
+footer .footerSocial {
+  display: block;
+  margin-bottom: 20px; }
+
+footer .footerSocial i {
+  font-size: 30px;
+  color: #56666E; }
+
+footer .copyRight {
+  margin-top: 20px; }
+
+footer .copyRight p {
+  margin: 0; }
+
+@media all and (max-width: 1173px) {
+  .mainContent .contentBox .featuredBox {
+    grid-row-gap: 15px;
+    -ms-grid-rows: auto 15px auto 15px auto 15px auto !important;
+    grid-template-areas: "image" "content" "cta" "meta" !important; }
+  .mainContent .contentBox .featuredBox .cta {
+    padding: 5% !important;
+    margin-right: 0 !important; }
+  .mainContent .contentBox .featuredBox .cta a {
+    width: 100% !important; }
+  .mainContent .contentBox .featuredBox .featuredContent .priceList {
+    text-align: center !important; }
+  .mainContent .contentBox .featuredBox .featuredContent .priceList > div {
+    position: relative;
+    padding: 10px 0 !important;
+    border-width: 1px;
+    border-color: #ddd;
+    border-style: solid;
+    background-color: #ededed; }
+  .mainContent .contentBox .featuredBox .featuredContent .priceList > div sup {
+    position: absolute;
+    margin-top: 5px; }
+  .mainContent .contentBox .featuredBox .featuredContent .priceList > div span.price {
+    padding-left: 10px; }
+  .mainContent .contentBox .featuredBox .metaInfo {
+    -ms-grid-columns: 1fr 10px 3fr !important;
+    grid-template-columns: 1fr 3fr !important;
+    grid-column-gap: 10px; } }
+
+@media all and (max-width: 859px) {
+  .mainContent.topBar {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+    grid-template: auto / 1fr;
+    text-align: center; }
+  .mainContent.topBar .topBarContent {
+    text-align: center !important; }
+  .mainContent .contentBox .featuredBox .metaInfo {
+    grid-column-gap: 10%;
+    grid-template-columns: 1fr !important; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div {
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 15px; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle {
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "icon icontitle icontitle icontitle" "none icontitle icontitle icontitle";
+    grid-template-columns: 1fr 20fr;
+    grid-column-gap: 10px; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle i {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: icon;
+    margin: 0; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle span {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 5;
+    grid-area: icontitle;
+    line-height: 18px; } }
+
+@media all and (max-width: 525px) {
+  .mainContent .contentBox .featuredBox .featuredContent .priceList {
+    -ms-grid-rows: auto 10px auto !important;
+    -ms-grid-columns: 1fr 10px 1fr !important;
+    grid-template: auto auto / 1fr 1fr !important; } }
