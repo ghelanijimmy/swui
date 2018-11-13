@@ -1,11 +1,53 @@
 /*******NORMALIZATION********/
+* {
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+.boldText {
+  font-weight: 600 !important; }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  color: #D91E81;
+  font-weight: 300; }
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #56666E;
+  margin: 0; }
+
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #463469; }
+
+body {
+  margin: 0; }
+
+p {
+  font-size: 18px;
+  color: #56666E; }
+
+section {
+  margin-bottom: 30px; }
+
+a {
+  color: #D91E81; }
+
 /*******GENERIC STYLES*******/
 .centerText {
   text-align: center; }
 
 /*****HERO*******/
-.hero {
-  background-image: url("https://placehold.it/1920x300");
+.fullWidthContent {
+  margin: 0;
+  padding: 0; }
+
+.fullWidthContent .hero {
+  background-image: url("../images/Banner.png");
   min-height: 300px;
   background-size: cover;
   background-position: center;
@@ -13,93 +55,216 @@
 
 /*******MAINCONTENT******/
 .mainContent {
-  max-width: 1920px;
-  width: 80%;
+  max-width: 1366px;
+  width: 90%;
   margin: auto; }
+
+.mainContent.topBar {
+  box-sizing: border-box;
+  padding: 2% 0;
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  align-items: center; }
+
+.mainContent.topBar .topBarContent {
+  text-align: right; }
+
+.mainContent.topBar .topBarContent a {
+  font-weight: 400;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0 2%;
+  color: #56666E; }
+
+.mainContent.topBar .topBarContent a:nth-of-type(even) {
+  border-left: 1px solid #56666E;
+  border-right: 1px solid #56666E; }
 
 .mainContent .contentBox {
   /*******FEATURED*******/ }
 
+.mainContent .contentBox section #hiddenText {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  transition: .2s all ease-in-out; }
+
 .mainContent .contentBox section .readMoreButton {
   display: block;
-  margin: auto;
+  margin: 10px auto 0;
   width: 100px;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 1%;
+  position: relative; }
 
 .mainContent .contentBox section.featuredBox {
-  background: #ededed;
+  border: 1px solid #ddd;
   display: grid;
-  grid-template: auto / 1fr 2fr; }
+  grid-template-areas: "image content content content content cta cta cta cta" "meta meta meta meta meta meta meta meta meta"; }
+
+.mainContent .contentBox section.featuredBox i {
+  margin-right: 10px; }
 
 .mainContent .contentBox section.featuredBox .featuredImage {
-  background-image: url("https://placehold.it/400x300");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  background-size: cover; }
+  grid-area: image; }
+
+.mainContent .contentBox section.featuredBox .featuredImage img {
+  width: 100%; }
 
 .mainContent .contentBox section.featuredBox .featuredContent {
-  display: grid;
-  grid-template: auto / 1fr;
-  grid-gap: 10px 0px;
+  grid-area: content;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 2% 2%; }
+  padding: 0% 30px;
+  align-self: center; }
+
+.mainContent .contentBox section.featuredBox .featuredContent h4 {
+  margin: 0; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px 10px; }
+  grid-gap: 10px 10px;
+  margin-top: 30px; }
 
 .mainContent .contentBox section.featuredBox .featuredContent .priceList div {
-  background-color: #dcdcdc;
-  -webkit-box-shadow: 0px 3px 10px -2px black;
-  -moz-box-shadow: 0px 3px 10px -2px black;
-  box-shadow: 0px 3px 10px -2px black; }
+  border-left: 1px solid #ddd;
+  padding-left: 20px; }
 
-.mainContent .contentBox section.featuredBox .featuredContent .priceList div span, .mainContent .contentBox section.featuredBox .featuredContent .priceList div a {
-  display: block; }
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div p {
+  margin: 0; }
 
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  background-color: white; }
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div p.subPrice {
+  font-size: 14px; }
 
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .logo {
-  display: grid;
-  grid-template: 1fr 1fr / 1fr;
-  align-items: center;
-  justify-content: center; }
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div p.subPrice span {
+  font-weight: 600; }
 
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .logo img {
+.mainContent .contentBox section.featuredBox .featuredContent .priceList div span.price {
+  color: #D91E81;
+  font-weight: 800;
+  font-size: 32px; }
+
+.mainContent .contentBox section.featuredBox .cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 15% 0;
+  margin-right: 30px;
+  grid-area: cta; }
+
+.mainContent .contentBox section.featuredBox .cta a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #27C4B8;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
   display: block;
-  margin: auto; }
+  width: 90%;
+  text-align: center; }
 
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox {
+.mainContent .contentBox section.featuredBox .metaInfo {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr; }
-
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox span {
-  display: block; }
-
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox ul {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 6fr;
   align-items: center;
   justify-content: center;
-  max-width: 100px;
-  width: 100%;
-  background: #dcdcdc;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  display: grid;
-  grid-template: auto/repeat(5, 1fr);
-  margin: auto; }
+  background-color: #DDDDDD;
+  grid-area: meta;
+  color: #56666E;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2%; }
 
-.mainContent .contentBox section.featuredBox .featuredContent .metaInfo .ratingBox ul li {
-  color: white; }
+.mainContent .contentBox section.featuredBox .metaInfo .ratingBox {
+  max-width: 100px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 1px 5px 4px;
+  background-color: white;
+  margin-right: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .ratingBox i {
+  margin: 0;
+  color: #27C4B8;
+  font-size: 10px; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .metaDetails p {
+  margin: 0; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .metaDetails > div {
+  margin-bottom: 15px; }
+
+.mainContent .contentBox section.featuredBox .metaInfo .metaDetails > div span.metaTitle {
+  font-size: 20px;
+  font-weight: 600; }
+
+footer {
+  background-color: #ddd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin-top: 150px; }
+
+footer .footerSocial {
+  display: block;
+  margin-bottom: 20px; }
+
+footer .footerSocial i {
+  font-size: 30px;
+  color: #56666E; }
+
+footer .copyRight {
+  margin-top: 20px; }
+
+footer .copyRight p {
+  margin: 0; }
+
+@media all and (max-width: 1173px) {
+  .mainContent .contentBox .featuredBox {
+    grid-row-gap: 15px;
+    grid-template-areas: "image" "content" "cta" "meta" !important; }
+  .mainContent .contentBox .featuredBox .cta {
+    padding: 5% !important; }
+  .mainContent .contentBox .featuredBox .cta a {
+    width: 100% !important; }
+  .mainContent .contentBox .featuredBox .featuredContent .priceList {
+    text-align: center !important; }
+  .mainContent .contentBox .featuredBox .featuredContent .priceList > div {
+    padding: 10px 0 !important;
+    border-width: 1px;
+    border-color: #ddd;
+    border-style: solid;
+    background-color: #ededed; }
+  .mainContent .contentBox .featuredBox .metaInfo {
+    grid-template-columns: 1fr 3fr !important;
+    grid-column-gap: 10px; } }
+
+@media all and (max-width: 859px) {
+  .mainContent .contentBox .featuredBox .metaInfo {
+    grid-column-gap: 10%; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div {
+    display: grid;
+    grid-row-gap: 15px; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle {
+    display: grid;
+    grid-template-areas: "icon icontitle icontitle icontitle" "none icontitle icontitle icontitle";
+    grid-column-gap: 10px; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle i {
+    grid-area: icon;
+    margin: 0; }
+  .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle span {
+    grid-area: icontitle;
+    line-height: 18px; } }
