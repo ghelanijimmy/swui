@@ -337,9 +337,10 @@ footer .copyRight p {
   .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle {
     display: -ms-grid;
     display: grid;
-    grid-template-areas: "icon icontitle icontitle icontitle" "none icontitle icontitle icontitle";
+    grid-template-areas: "icon icontitle icontitle icontitle" "icon icontitle icontitle icontitle";
     grid-template-columns: 1fr 20fr;
-    grid-column-gap: 10px; }
+    grid-column-gap: 10px;
+    align-items: center; }
   .mainContent .contentBox .featuredBox .metaInfo .metaDetails > div .metaTitle i {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
